@@ -1,0 +1,62 @@
+<!--
+  Generated template for the AddAbsencePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>AddAbs</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select [(ngModel)]="AB.type" >
+        <ion-option value="Retard"> Retard</ion-option>
+        <ion-option value="Abssence">Abssence</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Nom Prenom" [(ngModel)]="AB.name" ng-model="customQuote"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h2>Absence</h2>
+    </ion-item>
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="AB.DateDD"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="AB.DateDH"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <h2>Retard</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>du</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="AB.DateD"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>jusqu'au</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="AB.DateF"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="cause" [(ngModel)]="AB.Disc" ng-model="customQuote"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block clear (click)=" AddAbsence(AB)">Add</button>
+
+
+
+</ion-content>
